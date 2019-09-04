@@ -1,4 +1,4 @@
-# Objetivo: Obter quais maquinas estão online na rede e com WinRM escutando.
+# Objetivo: Deligar diversos computadores remotamente.
 
 # Descomente a lista conforme o laboratório desejado
 

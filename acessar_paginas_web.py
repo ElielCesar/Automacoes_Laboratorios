@@ -1,7 +1,10 @@
-# Acessar o Sistemas automaticamente usando coordenadas do mouse.
+# Acessa pontos do sistema ou paginas web automaticamente usando coordenadas do mouse.
 # as coordenadas de cada local podem ser obtidas atraves do trecho de codigo
 # comentado abaixo:
+
 '''
+# Salve em um novo arquivo .py e execute para obter as coordenadas.
+
 import PyWinMouse
 
 ponteiro = PyWinMouse.Mouse()
@@ -34,7 +37,7 @@ ponteiro.left_click()
 pyperclip.copy('SENHA AQUI')
 pyperclip.paste()
 
-# clica em acessar
+# clica em acessar/login
 ponteiro.move_mouse(372, 666)
 ponteiro.left_click()
 ponteiro.left_click()

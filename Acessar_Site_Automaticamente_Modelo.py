@@ -25,5 +25,5 @@ senha.send_keys('senha_aqui')
 sleep(2)
 
 # Clica no botao acessar
-submit = browser.find_element_by_class_name('infraButton')
+submit = browser.find_element_by_id('sbmLogin')
 submit.click()

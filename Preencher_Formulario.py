@@ -1,61 +1,47 @@
-# Preencher_Formulario.py
-# Usa dados de um arquivo csv para preencher um formulario
+# Funcao - Preencher um formulario simples com nome e email.
 
-import pyperclip
-import PyWinMouse
+# Baixe o chromedriver para o seu computador, ele que vai manipular os dados:
+# Chrome - https://chromedriver.chromium.org/getting-started
+
+# Instalar o pacote Selenium - pip install selenium
+# Use o inspecionar elementos do chrome para encontrar os valores dos campos.
+
+# Importando o Selenium webdriver
+from selenium import webdriver
 from time import sleep
-from pynput.keyboard import Key, Controller
 
-# cria o objeto teclado e mouse
-teclado = Controller()
-ponteiro = PyWinMouse.Mouse()
+# Criando o Objeto Navegador usando o Chrome e o chromedriver
+browser = webdriver.Chrome(
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe')
 
-# ler o arquivo csv com nome e email
+# Abrindo a pagina web
+browser.get(
+    'https://docs.google.com/forms/d/e/1FAIpQLSdmeNpOfT8_-o8-S721DipQ9lk5az9qzb4U7rlc9EkVyKf3ZA/viewform')
 
-for line_number in range(1, 10):
+for line_number in range(1, 13):
     linhas = [linha for linha in open('listacandidatos.csv')]
     dados = linhas[line_number].strip().split(';')
     nome = dados[0]
     email = dados[1]
 
-    # Cria o objeto ponteiro e vai para o form usuario.
-    ponteiro.move_mouse(35, 370)
-    ponteiro.left_click()
-    ponteiro.right_click()
-    ponteiro.left_click()
-    sleep(3)
-    ponteiro.move_mouse(134, 345)
-    ponteiro.left_click()
+    # Envia o Nome para a pagina
+    sleep(2)
+    login = browser.find_element_by_name('entry.1246577254')
+    login.send_keys(nome)
 
-    # insere dados no form usuario
-    pyperclip.copy(nome)
-    with teclado.pressed(Key.ctrl):
-        teclado.press('v')
-    sleep(6)
+    # Envia a E-mail para a pagina
+    sleep(2)
+    senha = browser.find_element_by_name('entry.2041624029')
+    senha.send_keys(email)
 
-    # fora do form
-    ponteiro.move_mouse(35, 370)
-    ponteiro.left_click()
-    sleep(6)
+    # Clica no botao enviar
+    sleep(2)
+    submit = browser.find_element_by_class_name(
+        'quantumWizButtonPaperbuttonContent')
+    submit.click()
 
-    # move e insere no form email
-    ponteiro.move_mouse(134, 426)
-    ponteiro.left_click()
-    pyperclip.copy(email)
-    with teclado.pressed(Key.ctrl):
-        teclado.press('v')
-    sleep(6)
-
-    # clica em enviar
-    ponteiro.move_mouse(128, 490)
-    sleep(6)
-    ponteiro.left_click()
-    sleep(6)
-
-    # voltar para outra resposta
-    ponteiro.move_mouse(138, 296)
-    sleep(6)
-    ponteiro.left_click()
-
-    nome = None
-    email = None
+    # Clica em enviar outra resposta
+    sleep(2)
+    nova_resp = browser.find_element_by_link_text('Enviar outra resposta')
+    nova_resp.click()
+    sleep(2)

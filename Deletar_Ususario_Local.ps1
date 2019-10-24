@@ -1,6 +1,6 @@
 # Objetivo: Deletar um usuario LOCAL em todas as maquinas do laboratório.
 
-# Descomente a lista conforme o laboratório desejado
+# Descomente a lista conforme o laboratório desejado.
 
 $computers = "aqs-la01","aqs-la02","aqs-la03","aqs-la04","aqs-la05","aqs-la06","aqs-la07","aqs-la08",
 "aqs-la09","aqs-la10","aqs-la11","aqs-la12","aqs-la13","aqs-la14","aqs-la15","aqs-la16",

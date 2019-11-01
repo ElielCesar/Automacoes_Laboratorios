@@ -2,7 +2,6 @@
 
 from selenium import webdriver
 from time import sleep
-import subprocess
 
 driver = webdriver.Chrome(
     'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe')

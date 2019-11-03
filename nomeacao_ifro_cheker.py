@@ -1,4 +1,4 @@
-# Funcão - Realizar um crawler no site do ifro onde as nomeacões são feitas
+# Funcao - Realizar um crawler no site do ifro onde as nomeacoes sao feitas
 # e trazer o nome dos candidatos convocados.
 
 from bs4 import BeautifulSoup as bs

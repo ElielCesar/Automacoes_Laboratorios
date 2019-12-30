@@ -6,12 +6,11 @@
 
 # Descomente a lista conforme o laboratório desejado.
 
-$computers = "aqs-la01","Elielteste02","Elielteste03","Elielteste04"
-#"aqs-la05","aqs-la06","aqs-la07","aqs-la08",
-#"aqs-la09","aqs-la10","aqs-la11","aqs-la12","aqs-la13","aqs-la14","aqs-la15","aqs-la16",
-#"aqs-la17","aqs-la18","aqs-la19","aqs-la20","aqs-la21","aqs-la22","aqs-la23","aqs-la24",
-#"aqs-la25","aqs-la26","aqs-la27","aqs-la28","aqs-la29","aqs-la30","aqs-la31","aqs-la32",
-#"aqs-la33","aqs-la34","aqs-la35","aqs-la36","aqs-la37","aqs-la38","aqs-la39","aqs-la40"
+$computers = "aqs-la01","aqs-la02","aqs-la03","aqs-la04","aqs-la05","aqs-la06","aqs-la07","aqs-la08",
+"aqs-la09","aqs-la10","aqs-la11","aqs-la12","aqs-la13","aqs-la14","aqs-la15","aqs-la16",
+"aqs-la17","aqs-la18","aqs-la19","aqs-la20","aqs-la21","aqs-la22","aqs-la23","aqs-la24",
+"aqs-la25","aqs-la26","aqs-la27","aqs-la28","aqs-la29","aqs-la30","aqs-la31","aqs-la32",
+"aqs-la33","aqs-la34","aqs-la35","aqs-la36","aqs-la37","aqs-la38","aqs-la39","aqs-la40"
 
 <# Segundo Bloco de Laboratorios - Caso precise usar comente o primeiro e descomente esse.
 $computers = "aqs-lb01","aqs-lb02","aqs-lb03","aqs-lb04","aqs-lb05","aqs-lb06","aqs-lb07","aqs-lb08",

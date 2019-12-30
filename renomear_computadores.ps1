@@ -1,7 +1,4 @@
 
-
-# ESTE SCRIPT AINDA NAO FOI TESTADO EM PRODUCAO PARA CONFIRMAR SE FUNCIONA.
-
 # Objetivo: Renomear todos os computadores baseados no IP de cada um.
 
 # Descomente a lista conforme o laboratório desejado.

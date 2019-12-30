@@ -1,4 +1,6 @@
 # Inserir todas mas maquinas no dominio automaticamente.
+# Requisitos: Poweshell 5 ou superior, WinRM configurado e ativado, Firewall do Windows Desativado.
+
 
 $computers = "10.38.1.1","10.38.1.2","10.38.1.3","10.38.1.4","10.38.1.5","10.38.1.6","10.38.1.7","10.38.1.8",
 "10.38.1.9","10.38.1.10","10.38.1.11","10.38.1.12","10.38.1.13","10.38.1.14","10.38.1.15","10.38.1.16",

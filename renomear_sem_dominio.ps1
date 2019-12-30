@@ -30,7 +30,7 @@ Write-Output "Total de computadores ativos e escutando: " $online.Count
 Write-Output " "
 Write-Output "Os Seguintes computadores estao offline ou nao responderam: " $offline
 
-#Altere o nome das maquinas conforme o ip que ela tiver
+# A PARTE A SEGUIR SERA EXECUTADA DENTRO DE CADA HOST
 Invoke-Command -ComputerName $online { 
 
 $ip =  Get-WmiObject -Class win32_networkadapterconfiguration

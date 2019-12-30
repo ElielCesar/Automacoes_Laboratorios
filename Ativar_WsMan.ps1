@@ -15,7 +15,8 @@ net user Administrador SENHA-AQUI /ACTIVE:YES
 #habilitar psremoting
 Enable-PSRemoting -Force
 
-#setar o host como confiavel no wsman
+#setar o host como confiavel no wsman deve ser feito nos clientes e na sua maquina de controle tambem.
+# dessa forma o acesso via IP se torna possivel.
 Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
 
 #reiniciar o serviço winrm

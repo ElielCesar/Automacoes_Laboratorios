@@ -50,7 +50,7 @@ Write-Output "Os Seguintes computadores estao offline ou nao responderam: " $off
 Invoke-Command -ComputerName $online { 
 
 $ip =  Get-WmiObject -Class win32_networkadapterconfiguration
-$credenciais = Get-Credential ifro.local\2171370
+$credenciais = Get-Credential ifro.local\USUARIO_DOMINIO_AQUI
 
 if ($ip.IPAddress -eq '10.38.1.1'){Rename-Computer -NewName 'aqs-la01' -DomainCredential $credenciais; sleep 5; shutdown /r}
 if ($ip.IPAddress -eq '10.38.1.2'){Rename-Computer -NewName 'aqs-la02' -DomainCredential $credenciais; sleep 5; shutdown /r}
